@@ -26,7 +26,7 @@
       <file leaf-file-name="2014_11_08_142134_create_users_table.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_11_08_142134_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="33" selection-start="500" selection-end="500" vertical-scroll-proportion="0.5050505" vertical-offset="0" max-vertical-offset="615">
+            <state line="21" column="62" selection-start="538" selection-end="538" vertical-scroll-proportion="0.5050505" vertical-offset="0" max-vertical-offset="630">
               <folding />
             </state>
           </provider>
@@ -229,7 +229,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_11_08_142134_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="33" selection-start="500" selection-end="500" vertical-scroll-proportion="0.5050505" vertical-offset="0" max-vertical-offset="615">
+        <state line="21" column="62" selection-start="538" selection-end="538" vertical-scroll-proportion="0.5050505" vertical-offset="0" max-vertical-offset="630">
           <folding />
         </state>
       </provider>
