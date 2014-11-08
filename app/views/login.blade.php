@@ -5,6 +5,7 @@
     <title>Sherry Cakes</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
@@ -13,23 +14,35 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    {{ Form::open(array('url' => 'login')) }}
-        <h1>Login</h1>
-        <p>
-            {{ $errors->first('email') }}
-            {{ $errors->first('password') }}
-        </p>
-        <p>
-            {{ Form::label('email', 'Email Address') }}
-            {{ Form::text('email', Input::old('email'), array('placeholder' => 'Email Address')) }}
-        </p>
-        <p>
-            {{ Form::label('password', 'Password') }}
-            {{ Form::password('password') }}
-        </p>
-        <p>
-            {{ Form::submit('Submit') }}
-        </p>
-    {{ Form::close() }}
+    <div class="container">
+        <div class="row vertical-offset-100">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row-fluid user-row">
+                            <img src="images/logo.png" class="img-responsive" alt="Sherry Cakes"/>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        {{ Form::open(array('url' => 'login', 'role' => 'form', 'class' => 'form-signin')) }}
+                            <p>
+                                {{ $errors->first('username') }}<br>
+                                {{ $errors->first('password') }}
+                            </p>
+                            <fieldset>
+                                <label class="panel-login">
+                                    <div class="login_result"></div>
+                                </label>
+                                {{ Form::text('username', Input::old('username'), array('id' => 'username', 'class' => 'form-control', 'placeholder' => 'Username')) }}
+                                {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password', 'id' => 'password')) }}
+                                <br></br>
+                                {{ Form::submit('Login »', array('class' => 'btn btn-lg btn-success btn-block', 'id' => 'login', 'value' => 'Login')) }}
+                            </fieldset>
+                        {{ Form::close() }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

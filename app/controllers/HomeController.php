@@ -9,7 +9,7 @@ class HomeController extends BaseController {
     public function doLogin() {
         // validate the info
         $rules = array(
-            'email'    => 'required|email',
+            'username'    => 'required',
             'password' => 'required|alphaNum|min:3'
         );
 
@@ -23,7 +23,7 @@ class HomeController extends BaseController {
                 ->withInput(Input::except('password'));
         } else {
             $userdata = array(
-               'email' 	=> Input::get('email'),
+               'username' 	=> Input::get('username'),
                'password' 	=> Input::get('password')
             );
 
