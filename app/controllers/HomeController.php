@@ -38,7 +38,7 @@ class HomeController extends BaseController {
 
     public function doLogout() {
         Auth::logout();
-        return Redirect::to('logout');
+        return Redirect::to('login');
     }
 
 }

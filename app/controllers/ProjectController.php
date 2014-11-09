@@ -21,7 +21,7 @@ class ProjectController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('projects.create');
 	}
 
 	/**
@@ -32,7 +32,34 @@ class ProjectController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		// validate
+        $rules = array(
+          'projectname' => 'required',
+          'email'      => 'required|email'
+        );
+        $validator = Validator::make(Input::all(), $rules);
+
+        //process the login
+        if($validator->fails()) {
+            return Redirect::to('projects/create')
+                ->withErrors($validator)
+                ->withInput();
+        } else {
+            //store
+            $project = new Project;
+            $project->projectname = Input::get('projectname');
+            $project->customername = Input::get('customername');
+            $project->customeraddress = Input::get('address');
+            $project->customercity = Input::get('city');
+            $project->customerstate = Input::get('state');
+            $project->customerzip = Input::get('zip');
+            $project->customeremail = Input::get('email');
+            $project->customerphone = Input::get('phone');
+        }
+
+        //redirect
+        Session::flash('message', 'Successfully created new Project');
+        return Redirect::to('projects');
 	}
 
 	/**

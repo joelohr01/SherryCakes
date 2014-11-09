@@ -21,6 +21,8 @@ class CreateProjectsTable extends Migration {
             $table->string('customercity');
             $table->string('customerstate');
             $table->integer('customerzip');
+            $table->string('customeremail');
+            $table->integer('customerphone');
             $table->string('styleofcake');
             $table->string('typeoffrosting');
             $table->string('colors');

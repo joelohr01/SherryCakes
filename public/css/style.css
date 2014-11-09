@@ -3,6 +3,8 @@ body {
     background-size: cover;
 }
 
+.jumbotron { margin: 20px 0; }
+
 /*** menu ***/
 
 .nav-side-menu {
