@@ -29,7 +29,7 @@ class HomeController extends BaseController {
 
             //attempt to do the login
             if (Auth::attempt($userdata)) {
-                echo 'Success!';
+                return Redirect::to('/');
             } else {
                 return Redirect::to('login');
             }

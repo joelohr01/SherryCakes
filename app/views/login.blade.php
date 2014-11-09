@@ -5,7 +5,7 @@
     <title>Sherry Cakes</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
@@ -25,8 +25,7 @@
                     </div>
                     <div class="panel-body">
                         {{ Form::open(array('url' => 'login', 'role' => 'form', 'class' => 'form-signin')) }}
-                            <p>
-                                {{ $errors->first('username') }}<br>
+                            <p>{{ $errors->first('username') }}<br>
                                 {{ $errors->first('password') }}
                             </p>
                             <fieldset>
