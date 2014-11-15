@@ -15,20 +15,9 @@
                 </a>
             </li>
 
-            <li data-toggle="collapse" data-target="#products" class="collapsed">
+            <li>
                 <a href="projects/create"><i class="fa fa-gift fa-lg"></i> New Project</a>
             </li>
-
-
-            <li data-toggle="collapse" data-target="#service" class="collapsed">
-                <a href="/logout"><i class="fa fa-user fa-lg"></i> Logout </a>
-            </li>
-
-
-            <li data-toggle="collapse" data-target="#new" class="collapsed">
-                <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
-            </li>
-
 
             <li>
                 <a href="#">
@@ -37,9 +26,7 @@
             </li>
 
             <li>
-                <a href="#">
-                    <i class="fa fa-users fa-lg"></i> Users
-                </a>
+                <a href="/logout"><i class="fa fa-user fa-lg"></i> Logout </a>
             </li>
 
         </ul>
